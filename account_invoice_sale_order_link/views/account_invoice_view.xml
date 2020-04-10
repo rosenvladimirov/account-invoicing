@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_customer_account_invoice_sale_order_form" model="ir.ui.view">
+        <field name="name">Account invoice (customer) link to Sale Order</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <field name="has_sale_orders" invisible="1"/>
+                <button name="action_view_sale_order" type="object"
+                        class="oe_stat_button" icon="fa-dollar" string="Sales Orders" attrs="{'invisible': [('has_sale_orders', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

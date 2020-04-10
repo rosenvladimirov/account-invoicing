@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2004-2011 Pexego Sistemas Informáticos. (http://pexego.es)
+     Copyright 2014 Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+     Copyright 2016 Antonio Espinosa <antonio.espinosa@tecnativa.com>
+     Copyright 2018-2019 Rosen Vladimirov <rv@dxfactory.eu>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+<record id="view_customer_account_invoice_add_debit_note_details_form" model="ir.ui.view">
+    <field name="name">Account invoice (customer) | add Refunds details (form)</field>
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.invoice_form"/>
+    <field name="arch" type="xml">
+        <notebook position="inside">
+            <field name="has_debit_note" invisible="1"/>
+            <field name="sub_type" invisible="1"/>
+            <page name="debitnotes"
+                  string="Debit notes"
+                  attrs="{'invisible':[('has_debit_note', '=', False)]}">
+                <field name="debitnote_invoice_ids" nolabel="1">
+                    <tree decoration-info="state == 'draft'"
+                          decoration-muted="state == 'cancel'"
+                          string="Debit nots">
+                        <field name="partner_id" string="Customer"/>
+                        <field name="date_invoice" string="Bill date"/>
+                        <field name="number" string="Number"/>
+                        <field name="reference" string="Reference"/>
+                        <field name="origin" string="Source"/>
+                        <field name="debit_note_reason" string="Debit note reason"/>
+                        <field name="amount_total" string="Total"/>
+                        <field name="state" string="Status"/>
+                    </tree>
+                </field>
+            </page>
+        </notebook>
+        <xpath expr="//page[@name='other_info']//field[@name='origin']" position="after">
+            <field name="debitnote_invoice_id"
+                   readonly="1"
+                   attrs="{'invisible': [('sub_type', 'not in', ('out_debitnote', 'in_debitnote'))]}"
+            />
+            <field name="debit_note_reason"
+                   readonly="1"
+                   attrs="{'invisible': [('sub_type', 'not in', ('out_debitnote', 'in_debitnote'))]}"
+            />
+        </xpath>
+    </field>
+</record>
+
+<record id="view_supplier_account_invoice_add_debit_note_details_form" model="ir.ui.view">
+    <field name="name">Account invoice (supplier) | add Debit details (form)</field>
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.invoice_supplier_form"/>
+    <field name="arch" type="xml">
+        <notebook position="inside">
+            <field name="has_debit_note" invisible="1"/>
+            <field name="sub_type" invisible="1"/>
+            <page name="debitnotes"
+                  string="Debit notes"
+                  attrs="{'invisible':[('has_debit_note', '=', False)]}">
+                <field name="debitnote_invoice_ids" nolabel="1">
+                    <tree decoration-info="state == 'draft'"
+                          decoration-muted="state == 'cancel'"
+                          string="Debit notes">
+                        <field name="partner_id" string="Supplier"/>
+                        <field name="date_invoice" string="Bill date"/>
+                        <field name="number" string="Number"/>
+                        <field name="reference" string="Reference"/>
+                        <field name="origin" string="Source"/>
+                        <field name="debit_note_reason" string="Debit note reason"/>
+                        <field name="amount_total" string="Total"/>
+                        <field name="state" string="Status"/>
+                    </tree>
+                </field>
+            </page>
+        </notebook>
+        <xpath expr="//page[@name='other_info']//field[@name='name']" position="after">
+            <field name="debitnote_invoice_id"
+                   readonly="1"
+                   attrs="{'invisible': [('debitnote_invoice_id', '=', False)]}"
+            />
+            <field name="debit_note_reason"
+                   readonly="1"
+                   attrs="{'invisible': [('debit_note_reason', '=', False)]}"
+            />
+        </xpath>
+    </field>
+</record>
+
+</odoo>
