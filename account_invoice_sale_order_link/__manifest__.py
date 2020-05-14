@@ -10,7 +10,8 @@
     'website': 'https://github.com/rosenvladimirov/account-invoicing',
     'license': 'GPL-3',
     "depends": [
-            'account'
+            'account',
+            'sale',
             ],
     'data': [
             'views/account_invoice_view.xml'
