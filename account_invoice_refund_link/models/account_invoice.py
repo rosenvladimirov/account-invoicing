@@ -34,6 +34,11 @@ class AccountInvoice(models.Model):
             refund_lines_vals[i][2]['origin_line_ids'] = [(6, 0, line.ids)]
         return res
 
+    @api.onchange('refund_invoice_id')
+    def _onchange_refund_invoice_id(self):
+        for i, line in enumerate(self.invoice_line_ids):
+            self.origin_line_ids = [(6, False, line.ids)]
+
 
 class AccountInvoiceLine(models.Model):
     _inherit = 'account.invoice.line'

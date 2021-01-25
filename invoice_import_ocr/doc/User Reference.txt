@@ -1,0 +1,88 @@
+#####################################TESSERACT####################################
+==================================================================================
+Installation Command:
+
+sudo apt-get install tesseract-ocr
+sudo apt-get install imagemagick
+sudo pip3 install tesserocr
+sudo pip3 install Wand
+
+
+==================================================================================
+Note: Before Enable/Load odoo langauge please install supported tesseract-ocr 
+langauge package. All listed below...
+
+Installation Command:
+
+sudo apt-get install < supported language library >
+
+---------------------------         -------------------------------
+Supported Language Library.          English Name Of Language.
+---------------------------         -------------------------------
+1 tesseract-ocr-sqi                  Albanian
+2 tesseract-ocr-ara                  Arabic
+3 tesseract-ocr-eng                  English
+4 tesseract-ocr-swe                  Swedish
+5 tesseract-ocr-eus                  Basque
+6 tesseract-ocr-bul                  Bulgarian / български език
+7 tesseract-ocr-cat                  Catalan / Català                              
+8 tesseract-ocr-hrv                  Croatian / hrvatski jezik
+9 tesseract-ocr-ces                  Czech / Čeština
+10 tesseract-ocr-dan                 Danish / Dansk
+11 tesseract-ocr-nld                 Dutch (BE) / Nederlands (BE)
+12 tesseract-ocr-eng                 English (AU)
+13 tesseract-ocr-eng                 English (UK)
+14 tesseract-ocr-est                 Estonian / Eesti keel
+15 tesseract-ocr-fin                 Finnish / Suomi
+16 tesseract-ocr-fra                 French (BE) / Français (BE)
+17 tesseract-ocr-frm                 French (CA) / Français (CA)
+18 tesseract-ocr-frm                 French (CH) / Français (CH)
+19 tesseract-ocr-fra                 French / Français
+20 tesseract-ocr-glg                 Galician / Galego
+21 tesseract-ocr-cat                 Georgian / ქართული ენა
+22 tesseract-ocr-deu                 German / Deutsch
+23 tesseract-ocr-ell                 Greek / Ελληνικά
+24 tesseract-ocr-heb                 Hebrew / עִבְרִי
+25 tesseract-ocr-hin                 Hindi / हिंदी
+26 tesseract-ocr-hun                 Hungarian / Magyar
+27 tesseract-ocr-ind                 Indonesian / Bahasa Indonesia
+28 tesseract-ocr-ita                 Italian / Italiano
+29 tesseract-ocr-jpn                 Japanese / 日本語
+30 tesseract-ocr-kor                 Korean (KP) / 한국어 (KP)
+31 tesseract-ocr-kor                 Korean (KR) / 한국어 (KR)
+32 tesseract-ocr-lav                 Latvian / latviešu valoda
+33 tesseract-ocr-lit                 Lithuanian / Lietuvių kalba
+34 tesseract-ocr-mkd                 Macedonian / македонски јазик
+35 tesseract-ocr-nor                 Norwegian Bokmål / Norsk bokmål
+36 tesseract-ocr-pol                 Polish / Język polski
+37 tesseract-ocr-por                 Portuguese (BR) / Português (BR)
+38 tesseract-ocr-por                 Portuguese / Português
+39 tesseract-ocr-ron                 Romanian / română
+40 tesseract-ocr-rus                 Russian / русский язык
+41 tesseract-ocr-srp                 Serbian (Cyrillic) / српски
+42 tesseract-ocr-srp                 Serbian (Latin) / srpski
+43 tesseract-ocr-slk                 Slovak / Slovenský jazyk
+44 tesseract-ocr-slv                 Slovenian / slovenščina
+45 tesseract-ocr-spa                 Spanish (AR) / Español (AR)
+46 tesseract-ocr-spa                 Spanish (BO) / Español (BO)
+47 tesseract-ocr-spa                 Spanish (CL) / Español (CL)
+48 tesseract-ocr-spa                 Spanish (CO) / Español (CO)
+49 tesseract-ocr-spa                 Spanish (CR) / Español (CR)
+50 tesseract-ocr-spa                 Spanish (DO) / Español (DO)
+51 tesseract-ocr-spa                 Spanish (EC) / Español (EC)
+52 tesseract-ocr-spa                 Spanish / Español
+53 tesseract-ocr-spa                 Spanish (GT) / Español (GT)
+54 tesseract-ocr-spa                 Spanish (MX) / Español (MX)
+55 tesseract-ocr-spa                 Spanish (PA) / Español (PA)
+56 tesseract-ocr-spa                 Spanish (PE) / Español (PE)
+57 tesseract-ocr-spa                 Spanish (PY) / Español (PY)
+58 tesseract-ocr-spa                 Spanish (UY) / Español (UY)
+59 tesseract-ocr-spa                 Spanish (VE) / Español (VE)
+60 tesseract-ocr-tel                 Telugu / తెలుగు
+61 tesseract-ocr-tha                 Thai / ภาษาไทย
+62 tesseract-ocr-tur                 Turkish / Türkçe
+63 tesseract-ocr-ukr                 Ukrainian / українська
+64 tesseract-ocr-vie                 Vietnamese / Tiếng Việt
+
+===================================================================================
+###################################################################################

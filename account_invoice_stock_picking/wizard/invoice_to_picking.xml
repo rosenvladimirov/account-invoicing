@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="account_invoice_picking_form_view" model="ir.ui.view" >
+        <field name="name">account.invoice.picking.form</field>
+        <field name="model">account.invoice.picking</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name='invoice_lines' colspan="4">
+                    <tree editable="top" delete="1" create="0">
+                        <field name="invoice_piking_id" invisible="1"/>
+                        <field name="invoice_line_id" invisible="1"/>
+                        <field name="location_id" invisible="1"/>
+                        <field name="location_dest_id" invisible="1"/>
+                        <field name="company_id" invisible="1"/>
+                        <field name="warehouse_id" invisible="1"/>
+                        <field name="name" readonly="1"/>
+                        <field name="product_id" readonly="1"/>
+                        <field name="uom_id" readonly="1"/>
+                        <field name="price_unit" readonly="1"/>
+                        <field name="location_id" invisible="1"/>
+                        <field name="quantity"/>
+                    </tree>
+                </field>
+                <group col='4' colspan="4">
+                    <field name="location_dest_id" colspan="2"/>
+                    <field name="invoice_id" colspan="2" readonly="1"/>
+                </group>
+                <footer>
+                    <button name="action_stock_receive" type="object"
+                        string="Create picking" class="oe_highlight" invisible="context.get('force_mode', False) in ('out_invoice', 'out_refund')"/>
+                    <button name="action_stock_transfer" type="object"
+                        string="Create picking" class="oe_highlight" invisible="context.get('force_mode', False) in ('in_invoice', 'in_refund')"/>
+                    <button name="cancel" string="Cancel" class="oe_link"
+                        special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <act_window name="Create picking from invoice" res_model="account.invoice.picking"
+        src_model="account.invoice" view_mode="form" target="new"
+        id="account_invoice_picking_action" />
+</odoo>

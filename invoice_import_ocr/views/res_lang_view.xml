@@ -1,0 +1,27 @@
+<odoo>
+    <!--! Base language Form View Inherited!-->
+    <record id="form_view_res_lang_inherited" model="ir.ui.view">
+        <field name="name">res.lang.form</field>
+        <field name="model">res.lang</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.res_lang_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='iso_code']" position="after">
+                <field name="iso_369_3_code"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--! Base language Tree View Inherited !-->
+    <record id="tree_view_res_lang_inherited" model="ir.ui.view">
+        <field name="name">res.lang.form</field>
+        <field name="model">res.lang</field>
+        <field name="inherit_id" ref="base.res_lang_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='iso_code']" position="after">
+                <field name="iso_369_3_code"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

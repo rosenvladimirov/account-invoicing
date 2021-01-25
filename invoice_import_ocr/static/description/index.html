@@ -1,0 +1,364 @@
+<div class="container alert alert-warning">
+    <i class="fa fa-exclamation-triangle"></i> This module is developed by Serpent Consulting Services Pvt. Ltd.
+    Not covered under Odoo Maintenance Contract or Business Pack.
+    Contact at contact@serpentcs.com if you are looking for support or customization.
+    This module is using tesserocr lib of python that need to be installed on server before deploying this module in addons.<br/>
+    Installation Guide:Find User Reference.txt from invoice_import_ocr > doc!
+
+</div>
+
+<section class='oe_container oe_dark'>
+    <div class="oe_raw oe_spaced">
+        <h2 class="oe_slogan oe_span12" style="color:#875A7B;width:100%;align:center;text-align:center;">Import Invoice with OCR Scanning</h2>
+        <h3 class="oe_slogan oe_span12" style="color:#875A7B;width:100%;align:center;text-align:center;">This Module Will Import Customer Invoice or Vendor Invoice Based on Image or PDF!
+		Click <a href='https://www.youtube.com/watch?v=s4-6krkeY9M' target='_blank'>here</a> for the Video demonstration.</h3>
+    </div>
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="read_invoices.png" style="width:100%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class='oe_container oe_dark'>
+    <div class="oe_raw oe_spaced">
+        <h4 class="oe_slogan oe_mb32">Attach Image or PDF of Invoice</h4>
+        <p class="oe_slogan oe_span12" style="width:100%;align:center;text-align:center;">You can attach multiple images of invoice or a invoice pdf.
+            Choose whether to import customer invoice or supplier invoice with language and currency of the invoice.</p>
+    </div>
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12 oe_centered" style="width:90%">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="image_invoices.png" style="width:100%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class='oe_container oe_dark'>
+    <div class="oe_raw oe_spaced">
+       <h4 class="oe_slogan oe_mb32">Scan Invoice</h4>
+       <p class="oe_slogan oe_span12" style="width:100%;align:center;text-align:center;">OCR scan will auto generate invoice line, Customer/Supplier.
+            We will get side by side view of pdf and entries that will make invoice amendment easy after scan.
+            We can select or create a new partner and toggle between the invoice pages with the help of next and previous buttons.
+	    The Known limitation is, we support only the invoices created from Odoo. We can work on a specific format if you have such a need.</p>
+    </div>
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12 oe_centered" style="width:90%">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="read_invoice1.png" style="width:100%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class='oe_container oe_dark'>
+    <div class="oe_raw oe_spaced">
+        <h4 class="oe_slogan oe_mb32">Import Invoice</h4>
+        <p class="oe_slogan oe_mb32">The imported invoice will create a Customer or Supplier Invoice.</p>
+    </div>
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12 oe_centered" style="width:90%">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="import_invoice.png" style="width:100%;">
+            </div>
+        </div>
+    </div>
+</section>
+<section class='oe_container oe_dark'>
+	<div class="row">
+		<h4 class="oe_slogan oe_mb32">Limitations of the Module</h4>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2" />
+				<div class="col-md-10">
+					<ul style="list-style-type:circle" class="list-group">
+					<li>
+						<span >
+							This module Supports only the formats of standard Odoo Invoices.
+						</span>
+					</li>
+					<br />
+					<li>
+						<span>
+							Due to the limitations of the OCR library, INR is not supported by far.
+						</span>
+					</li>
+					<br />
+					<li>
+						<span>
+							The scanning of multiple taxes is not successful, you will get one tax scanned, rest taxes have to be added manually.
+						</span>
+					</li>
+				</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<section class='oe_container oe_dark'>
+	<div class='oe_span12 oe_raw oe_spaced'>
+		<pre>
+---------------------------         -------------------------------
+Supported Language Library.          English Name Of Language.
+---------------------------         -------------------------------
+1 tesseract-ocr-sqi                  Albanian
+2 tesseract-ocr-ara                  Arabic
+3 tesseract-ocr-eng                  English
+4 tesseract-ocr-swe                  Swedish
+5 tesseract-ocr-eus                  Basque
+6 tesseract-ocr-bul                  Bulgarian / български език
+7 tesseract-ocr-cat                  Catalan / Català                              
+8 tesseract-ocr-hrv                  Croatian / hrvatski jezik
+9 tesseract-ocr-ces                  Czech / Čeština
+10 tesseract-ocr-dan                 Danish / Dansk
+11 tesseract-ocr-nld                 Dutch (BE) / Nederlands (BE)
+12 tesseract-ocr-eng                 English (AU)
+13 tesseract-ocr-eng                 English (UK)
+14 tesseract-ocr-est                 Estonian / Eesti keel
+15 tesseract-ocr-fin                 Finnish / Suomi
+16 tesseract-ocr-fra                 French (BE) / Français (BE)
+17 tesseract-ocr-frm                 French (CA) / Français (CA)
+18 tesseract-ocr-frm                 French (CH) / Français (CH)
+19 tesseract-ocr-fra                 French / Français
+20 tesseract-ocr-glg                 Galician / Galego
+21 tesseract-ocr-cat                 Georgian / ქართული ენა
+22 tesseract-ocr-deu                 German / Deutsch
+23 tesseract-ocr-ell                 Greek / Ελληνικά
+24 tesseract-ocr-heb                 Hebrew / עִבְרִי
+25 tesseract-ocr-hin                 Hindi / हिंदी
+26 tesseract-ocr-hun                 Hungarian / Magyar
+27 tesseract-ocr-ind                 Indonesian / Bahasa Indonesia
+28 tesseract-ocr-ita                 Italian / Italiano
+29 tesseract-ocr-jpn                 Japanese / 日本語
+30 tesseract-ocr-kor                 Korean (KP) / 한국어 (KP)
+31 tesseract-ocr-kor                 Korean (KR) / 한국어 (KR)
+32 tesseract-ocr-lav                 Latvian / latviešu valoda
+33 tesseract-ocr-lit                 Lithuanian / Lietuvių kalba
+34 tesseract-ocr-mkd                 Macedonian / македонски јазик
+35 tesseract-ocr-nor                 Norwegian Bokmål / Norsk bokmål
+36 tesseract-ocr-pol                 Polish / Język polski
+37 tesseract-ocr-por                 Portuguese (BR) / Português (BR)
+38 tesseract-ocr-por                 Portuguese / Português
+39 tesseract-ocr-ron                 Romanian / română
+40 tesseract-ocr-rus                 Russian / русский язык
+41 tesseract-ocr-srp                 Serbian (Cyrillic) / српски
+42 tesseract-ocr-srp                 Serbian (Latin) / srpski
+43 tesseract-ocr-slk                 Slovak / Slovenský jazyk
+44 tesseract-ocr-slv                 Slovenian / slovenščina
+45 tesseract-ocr-spa                 Spanish (AR) / Español (AR)
+46 tesseract-ocr-spa                 Spanish (BO) / Español (BO)
+47 tesseract-ocr-spa                 Spanish (CL) / Español (CL)
+48 tesseract-ocr-spa                 Spanish (CO) / Español (CO)
+49 tesseract-ocr-spa                 Spanish (CR) / Español (CR)
+50 tesseract-ocr-spa                 Spanish (DO) / Español (DO)
+51 tesseract-ocr-spa                 Spanish (EC) / Español (EC)
+52 tesseract-ocr-spa                 Spanish / Español
+53 tesseract-ocr-spa                 Spanish (GT) / Español (GT)
+54 tesseract-ocr-spa                 Spanish (MX) / Español (MX)
+55 tesseract-ocr-spa                 Spanish (PA) / Español (PA)
+56 tesseract-ocr-spa                 Spanish (PE) / Español (PE)
+57 tesseract-ocr-spa                 Spanish (PY) / Español (PY)
+58 tesseract-ocr-spa                 Spanish (UY) / Español (UY)
+59 tesseract-ocr-spa                 Spanish (VE) / Español (VE)
+60 tesseract-ocr-tel                 Telugu / తెలుగు
+61 tesseract-ocr-tha                 Thai / ภาษาไทย
+62 tesseract-ocr-tur                 Turkish / Türkçe
+63 tesseract-ocr-ukr                 Ukrainian / українська
+64 tesseract-ocr-vie                 Vietnamese / Tiếng Việt
+		</pre>
+	</div>
+</section>
+<br/>
+
+<!-- LEFT::LEFT PHOTO - MEDIUM -->
+
+<table style="font-family: 'Helvetica Neue', Helvetica, Arial,
+sans-serif;" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+	<tbody>
+		<tr>
+			<td colspan="2" style="font-size:16px; color:#d74930; font-weight:bold;" width="100%" align="center">
+			<span class="fa fa-certificate fa-1x" style="color:#697582;">Check out our various Odoo Services below</spam>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:#d74930 solid 1px; line-height:10px;">&nbsp;
+			 </td>
+		</tr>
+		<tr>
+			<td  colspan="2">
+				<table style="font-size:11px; color:#697582; line-height:20px;" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tbody>
+						<tr>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/odoo-openerp-services/consulting"
+style="color:#697582; text-decoration:none;">Odoo Consulting</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/odoo-openerp-services/gap-analysis"
+style="color:#697582; text-decoration:none;">Gap Analysis and BPR</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/odoo-openerp-services/implementation"
+style="color:#697582; text-decoration:none;">Odoo Implementation</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/ecommerce-integrations/magento-integration"
+style="color:#697582; text-decoration:none;">Integration with E-Commerce</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/trainings/openerp-odoo-technical-training"
+style="color:#697582; text-decoration:none;">Odoo Technical Training</a></span></td>
+						</tr>
+						<tr>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/odoo-openerp-services/offshore-development-partnership"
+style="color:#697582; text-decoration:none;">Offshore & Onsite Development</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/odoo-packages/odoo-support-package"
+style="color:#697582; text-decoration:none;">Support and Maintenance</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/odoo-openerp-services/hire-odoo-openerp-developer"
+style="color:#697582; text-decoration:none;">Hire Dedicated Odoo Developer</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/ecommerce-integrations/paymentech-elavon-paypal-integration"
+style="color:#697582; text-decoration:none;">Payment Gateway Integrations</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/trainings/openerpodoo-functional-training"
+style="color:#697582; text-decoration:none;">Odoo Functional Training</a></span></td>
+						</tr>
+						<tr>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/community/aios-mobile-client"
+style="color:#697582; text-decoration:none;">Odoo Mobile App Development</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.odooqa.com/page/manual-functional-testing"
+style="color:#697582; text-decoration:none;">Odoo Manual Testing</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.odooqa.com/page/automated-functional-testing"
+style="color:#697582; text-decoration:none;">Odoo Automated Testing</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/ecommerce-integrations/fedex-ups-usps-integration"
+style="color:#697582; text-decoration:none;">Integration with Shipping API</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com/services/odoo-openerp-services/installation-and-hosting"
+style="color:#697582; text-decoration:none;">Installation & Hosting</a></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:#d74930 solid 1px; line-height:10px;">&nbsp;
+			 </td>
+		</tr>
+
+
+		<tr>
+			<td colspan="2" style="font-size:16px; color:#d74930; font-weight:bold;" width="100%" align="center">
+			<span class="fa fa-certificate fa-1x" style="color:#697582;">Check out our various Odoo Based Products</spam>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:#d74930 solid 1px; line-height:10px;">&nbsp;
+			 </td>
+		</tr>
+		<tr>
+			<td  colspan="2">
+				<table style="font-size:11px; color:#697582; line-height:20px;" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tbody>
+						<tr>
+							<td width="20%"><span class="fa fa-coffee fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/restaurant-management-system"
+style="color:#697582; text-decoration:none;">Restaurant Management</a></span></td>
+							<td width="20%"><span class="fa fa-building fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/property-management-system"
+style="color:#697582; text-decoration:none;">Property Management</a></span></td>
+							<td width="20%"><span class="fa fa-plane fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/visa-management-system"
+style="color:#697582; text-decoration:none;">Visa Agency Management</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/odoo-singapore-localization"
+style="color:#697582; text-decoration:none;">Singapore Localization</a></span></td>
+							<td width="20%"><span class="fa fa-graduation-cap fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/education-management-system"
+style="color:#697582; text-decoration:none;">School, University Management</a></span></td>
+						</tr>
+						<tr>
+							<td width="20%"><span class="fa fa-cubes fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/construction-management-system"
+style="color:#697582; text-decoration:none;">Construction Management</a></span></td>
+							<td width="20%"><span class="fa fa-bus fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/fleet-management-systems"
+style="color:#697582; text-decoration:none;">Fleet Management</a></span></td>
+							<td width="20%"><span class="fa fa-stethoscope fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/healthcare-management-software"
+style="color:#697582; text-decoration:none;">Medical ERP</a></span></td>
+							<td width="20%"><span class="fa fa-hotel fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/hotel-management-system"
+style="color:#697582; text-decoration:none;">Hotel Management</a></span></td>
+							<td width="20%"><span class="fa fa-users fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/human-resource-management-system"
+style="color:#697582; text-decoration:none;">Human Resource Management</a></span></td>
+						</tr>
+						<tr>
+							<td width="20%"><span class="fa fa-map-marker fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/odoo-fieldstaff-tracking-system"
+style="color:#697582; text-decoration:none;">Field Service Management</a></span></td>
+							<td width="20%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/spa-salon-management-system"
+style="color:#697582; text-decoration:none;">Spa & Salone Management</a></span></td>
+							<td width="20%"><span class="fa fa-phone fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/odoo-ringcentral-integration"
+style="color:#697582; text-decoration:none;">Ringcentral telephone integration</a></span></td>
+							<td width="20%"><span class="fa fa-heart fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/customer-relationship-management"
+style="color:#697582; text-decoration:none;">Customer Relationship Management</a></span></td>
+							<td width="20%"><span class="fa fa-user fa-1x" style="color:#697582;"> <a href="http://serpentcs.in/product/talent-management-system"
+style="color:#697582; text-decoration:none;">Talent Management</a></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="border-bottom:#d74930 solid 1px; line-height:10px;">&nbsp;
+			 </td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="font-size:16px; color:#d74930; font-weight:bold;" width="100%" align="center">
+			<span class="fa fa-certificate fa-1x" style="color:#697582;">For any questions, support and development contact us.</spam>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border-bottom:#d74930 solid 1px; line-height:10px;">&nbsp;
+			 </td>
+		</tr>
+
+		<tr>
+			<td  colspan="2">
+				<table style="font-size:11px; color:#697582; line-height:20px;" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tbody>
+						<tr>
+							<td width="38%"><span class="fa fa-whatsapp fa-1x" style="color:#697582;"> (+91) 98793-54457, (+91) 90334-72982 </span>
+							<span class="fa fa-phone fa-1x" style="color:#697582;"> +91-79-2975-0867</span></td>
+							<td width="17%"><span class="fa fa-envelope fa-1x" style="color:#697582;"> <a href="mailto:contact@serpentcs.com"
+style="color:#697582; text-decoration:none;">contact@serpentcs.com</a></span></td>
+							<td width="15%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.com"
+style="color:#697582; text-decoration:none;">www.serpentcs.com</a></span></td>
+							<td width="15%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.serpentcs.in"
+style="color:#697582; text-decoration:none;">www.serpentcs.in</a></span></td>
+							<td width="15%"><span class="fa fa-globe fa-1x" style="color:#697582;"> <a href="http://www.odooqa.com"
+style="color:#697582; text-decoration:none;">www.odooqa.com</a></span></td>
+						</tr>
+						<tr>
+							<td width="38%"><span class="fa fa-hand-pointer-o fa-1x" style="color:#697582;"> WhatsApp, Telegram or Call 24X7</span></td>
+							<td width="17%"><span class="fa fa-hand-pointer-o fa-1x" style="color:#697582;"> Help! Send Mail</span></td>
+							<td width="15%"><span class="fa fa-hand-pointer-o fa-1x" style="color:#697582;"> Browse our Services</span></td>
+							<td width="15%"><span class="fa fa-hand-pointer-o fa-1x" style="color:#697582;"> Browse our Products</span></td>
+							<td width="15%"><span class="fa fa-hand-pointer-o fa-1x" style="color:#697582;"> QA Services</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td  colspan="2" style="border-bottom:#d74930 solid 1px; line-height:10px;">&nbsp;
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td  colspan="2" style="padding-top:9px;">
+				<a href="https://www.facebook.com/Serpent-Consulting-Services-Pvt-Ltd-299017730141795/" style="text-decoration:none;"><img src="fb.jpg" style="vertical-align:middle; border-radius: 50%;" width="25">
+				</a>
+				<a href="https://twitter.com/Serpent_CS" style="text-decoration:none;"><img src="twitter.jpg" style="vertical-align:middle; border-radius: 50%;" width="25">
+				</a>
+				<a href="https://www.linkedin.com/company-beta/2435682/" style="text-decoration:none;"><img src="in.jpg" style="vertical-align:middle; border-radius: 50%;" width="25">
+				</a>
+				<a href="https://www.youtube.com/user/husendaudi123/videos" style="text-decoration:none;"><img src="youtube.jpg" style="vertical-align:middle; border-radius: 50%;" width="25">
+				</a>
+				<a href="https://www.instagram.com/explore/tags/serpentcs/"style="text-decoration:none;"><img src="insta.jpg" style="vertical-align:middle; border-radius: 50%;" width="25">
+				</a>
+			</td>
+		</tr>
+		<tr colspan="2">
+			<td  colspan="2" style="font-size:8px; color:#697582; line-height:15px;padding-top:10px; text-align:justify;">
+			</td>
+		</tr>
+	</tbody>
+</table>

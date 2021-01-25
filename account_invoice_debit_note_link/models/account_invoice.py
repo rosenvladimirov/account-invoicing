@@ -19,10 +19,10 @@ class AccountInvoice(models.Model):
             record.has_debit_note = len(record.debitnote_invoice_ids.ids) > 0
 
     @api.model
-    def _prepare_refund(self, invoice, date_invoice=None, date=None,
+    def _prepare_debit_note(self, invoice, date_invoice=None, date=None,
                         description=None, journal_id=None):
         """Add link in the debit note to the origin invoice lines."""
-        res = super(AccountInvoice, self)._prepare_refund(
+        res = super(AccountInvoice, self)._prepare_debit_note(
             invoice, date_invoice=date_invoice, date=date,
             description=description, journal_id=journal_id,
         )
@@ -34,6 +34,11 @@ class AccountInvoice(models.Model):
                 break
             debit_note_lines_vals[i][2]['origin_dn_line_ids'] = [(6, 0, line.ids)]
         return res
+
+    @api.onchange('debitnote_invoice_id')
+    def _onchange_refund_invoice_id(self):
+        for i, line in enumerate(self.invoice_line_ids):
+            self.origin_dn_line_ids = [(6, False, line.ids)]
 
 
 class AccountInvoiceLine(models.Model):
