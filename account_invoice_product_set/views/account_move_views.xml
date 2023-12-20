@@ -20,6 +20,13 @@
                     </page>
                 </xpath>
                 <xpath expr="//field[@name='invoice_line_ids']/tree" position="inside">
+                    <control>
+                        <button name="%(act_open_wizard_product_set_add_from_invoice)d"
+                                class="btn-link"
+                                type="action"
+                                string="Add set"
+                                context="{'default_move_id': parent.id, 'default_partner_id': parent.partner_id, 'active_id': parent.id, 'active_model': 'account.move'}"/>
+                    </control>
                     <field name="product_set_id"
                            options='{"no_create": True}'
                            optional="hide"/>

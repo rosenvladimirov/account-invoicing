@@ -17,6 +17,7 @@
     ],
     'data': [
         'security/ir.model.access.csv',
+        'wizard/product_set_add.xml',
         'views/account_move_views.xml',
     ],
     'demo': [
