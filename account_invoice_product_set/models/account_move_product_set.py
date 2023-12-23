@@ -8,6 +8,7 @@ class AccountMoveProductSet(models.Model):
     # _auto = False
 
     move_id = fields.Many2one('account.move', 'Invoice', required=True)
+    product_set_section_id = fields.Many2one('account.move.line', 'Product Set Section')
     product_set_id = fields.Many2one('product.set', 'Product Set')
     quantity = fields.Float('Quantity', digits='Product Unit of Measure')
     price_unit = fields.Float('Unit Price', compute='_compute_price_unit', store=True, precompute=True)
