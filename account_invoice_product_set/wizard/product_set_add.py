@@ -87,21 +87,30 @@ class InvoiceProductSetAdd(models.TransientModel):
     def add_set(self):
         """Add product set, multiplied by quantity in sale order line"""
         self._check_partner()
-        invoice_lines = self._prepare_order_lines()
+        invoice_lines = self._prepare_invoice_lines()
         if invoice_lines:
-            self.move_id.write({"invoice_line_ids": invoice_lines})
+            max_sequence = self._get_max_sequence()
+            section = [(0, 0, self.product_set_id.prepare_sale_order_values(max_sequence + 1))]
+            if self.with_context(dict(self._context, create_new_set=True)).move_id.write({"invoice_line_ids": section}):
+                product_set_section_id = self.move_id.invoice_line_ids[-1]
+                for vals in invoice_lines:
+                    command, key, values = vals
+                    values.update({
+                        'product_set_section_id': product_set_section_id.id,
+                    })
+                self.with_context(dict(self._context, create_new_set=True)).move_id.write({"invoice_line_ids": invoice_lines})
         return invoice_lines
 
-    def _prepare_order_lines(self):
+    def _prepare_invoice_lines(self):
         max_sequence = self._get_max_sequence()
         invoice_lines = []
-        invoice_lines.append((0, 0, self.product_set_id.prepare_account_move_values(max_sequence + 1)))
+        # invoice_lines.append((0, 0, self.product_set_id.prepare_sale_order_values(max_sequence + 1)))
         for seq, set_line in enumerate(self._get_lines(), start=1):
             values = self.prepare_account_move_line_data(set_line)
             # When we play with sequence widget on a set of product,
             # it's possible to have a negative sequence.
             # In this case, the line is not added at the correct place.
-            # So we have to force it with the invoice for the line.
+            # So we have to force it with the order of the line.
             values.update({"sequence": max_sequence + 1 + seq})
             invoice_lines.append((0, 0, values))
         return invoice_lines
