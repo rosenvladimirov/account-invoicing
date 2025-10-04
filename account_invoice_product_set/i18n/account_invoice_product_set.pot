@@ -1,0 +1,263 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_product_set
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20241108\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 06:52+0000\n"
+"PO-Revision-Date: 2024-11-12 06:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_line__product_set_section_id
+msgid "Account Product Set Section"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.invoice_product_set_add_form_view
+msgid "Add a line"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.invoice_product_set_add_form_view
+msgid "Add a note"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.invoice_product_set_add_form_view
+msgid "Add a section"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.invoice_product_set_add_form_view
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.view_move_form
+msgid "Add set"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.actions.act_window,name:account_invoice_product_set.act_open_wizard_product_set_add_from_invoice
+msgid "Add set in invoice"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.invoice_product_set_add_form_view
+msgid "Add set in sale order line"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.actions.act_window,name:account_invoice_product_set.act_open_wizard_product_set_add_from_set
+msgid "Add set to invoice"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.invoice_product_set_add_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__create_uid
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__create_date
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__display_name
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,help:account_invoice_product_set.field_invoice_product_set_add__skip_existing_products
+msgid ""
+"Enable this to not add new lines for products already included in Invoice "
+"lines."
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__id
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__id
+msgid "ID"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__move_id
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__move_id
+msgid "Invoice"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model,name:account_invoice_product_set.model_account_move_product_set
+msgid "Invoice Product Sets"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model,name:account_invoice_product_set.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model,name:account_invoice_product_set.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set____last_update
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__write_uid
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__write_date
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__product_set_id
+msgid "Product Set"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__product_set_section_id
+msgid "Product Set Section"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model,name:account_invoice_product_set.model_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_line__product_set_id
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__product_set_id
+msgid "Product set"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model,name:account_invoice_product_set.model_product_set_line
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_line__product_set_line_id
+msgid "Product set line"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__product_set_line_ids
+msgid "Product set lines"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_line__product_set_price_subtotal
+msgid "Product set price subtotal"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_line__product_set_qty
+msgid "Product set quantity"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_bank_statement_line__product_set_ids
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move__product_set_ids
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_bg_customs__product_set_ids
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_bg_protocol__product_set_ids
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_bg_report_sale__product_set_ids
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_payment__product_set_ids
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.view_move_form
+msgid "Product sets"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__quantity
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.view_move_form
+msgid "Re-order sections for set in lines"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model,name:account_invoice_product_set.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__skip_existing_products
+msgid "Skip Existing Products"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move__smart_search
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_line__smart_search
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__smart_search
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_invoice_product_set_add__smart_search
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_product_set__smart_search
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_product_set_line__smart_search
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_sale_order_line__smart_search
+msgid "Smart Search"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__price_subtotal
+msgid "Subtotal"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.view_move_form
+msgid "This will update all sequences in lines and recreate the sections."
+msgstr ""
+
+#. module: account_invoice_product_set
+#. odoo-python
+#: code:addons/account_invoice_product_set/models/account_move.py:0
+#: code:addons/account_invoice_product_set/models/account_move.py:0
+#, python-format
+msgid "Uncategorized"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model.fields,field_description:account_invoice_product_set.field_account_move_product_set__price_unit
+msgid "Unit Price"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model_terms:ir.ui.view,arch_db:account_invoice_product_set.view_move_form
+msgid "Update set sections"
+msgstr ""
+
+#. module: account_invoice_product_set
+#: model:ir.model,name:account_invoice_product_set.model_invoice_product_set_add
+msgid "Wizard model to add product set into a invoice"
+msgstr ""
+
+#. module: account_invoice_product_set
+#. odoo-python
+#: code:addons/account_invoice_product_set/wizard/product_set_add.py:0
+#, python-format
+msgid "You can use a sale order assigned only to following partner(s): {}"
+msgstr ""

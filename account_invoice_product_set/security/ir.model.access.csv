@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+account_move_product_set_user,Read-Write-Create-Delete access on account.move.product.set to users,model_account_move_product_set,base.group_user,1,1,1,1
+invoice_product_set_add_user,Read-Write-Create-Delete access on invoice.product.set.add to users,model_invoice_product_set_add,base.group_user,1,1,1,1
