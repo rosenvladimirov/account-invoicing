@@ -28,11 +28,11 @@
                         widget="section_and_note_one2many"
                         domain="[('product_set_id', '=', product_set_id)]"
                     >
-                        <tree>
+                        <list>
                             <field
                                 name="product_id"
                                 options="{'no_open': True, 'no_create': True}"
-                                attrs="{'required': [('display_type', '=', False)]}"
+                                required="not display_type"
                             />
                             <field name="display_type" />
                             <field name="name" widget="section_and_note_text" />
@@ -49,7 +49,7 @@
                                     context="{'default_display_type': 'line_note'}"
                                 />
                             </control>
-                        </tree>
+                        </list>
                     </field>
                 </group>
                 <footer>
@@ -68,7 +68,7 @@
         id="act_open_wizard_product_set_add_from_invoice"
         model="ir.actions.act_window"
     >
-        <field name="name">Add set in invoice</field>
+        <field name="name">Add a set in invoice</field>
         <field name="res_model">invoice.product.set.add</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="invoice_product_set_add_form_view" />

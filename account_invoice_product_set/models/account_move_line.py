@@ -11,11 +11,6 @@ class AccountMoveLine(models.Model):
     _inherit = ['account.move.line', 'product.set.mixin']
 
     product_set_section_id = fields.Many2one('account.move.line', string='Account Product Set Section')
-    # has_set_properties = fields.Boolean(compute="_get_has_set_properties")
-    #
-    # def _get_has_set_properties(self):
-    #     for rec in self:
-    #         rec.has_set_properties = len(rec.product_set_id.product_properties_ids.ids) > 0
 
     def _get_values_product_set_mixin(self, total_quantity):
         return self._get_update_product_set_section_values(total_quantity)

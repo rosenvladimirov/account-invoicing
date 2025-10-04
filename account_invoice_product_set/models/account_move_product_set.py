@@ -23,7 +23,8 @@ class AccountMoveProductSet(models.Model):
                 'price_unit': line.price_subtotal / quantity,
             })
 
-    def _get_account_move_product_set_value(self, move_id, product_set_id, price_subtotal, quantity):
+    @staticmethod
+    def _get_account_move_product_set_value(move_id, product_set_id, price_subtotal, quantity):
         return {
             'move_id': move_id.id,
             'product_set_id': product_set_id.id,
